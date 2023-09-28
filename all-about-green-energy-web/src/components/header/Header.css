@@ -1,4 +1,26 @@
-.header {
-  justify-content: space-between;
+.nav {
+  background-color: #e6e88a;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 30px;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.header-child {
+  color: #618d59;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.logo {
+  font-size: 50px;
 }
