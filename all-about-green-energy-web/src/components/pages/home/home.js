@@ -6,7 +6,7 @@ const Home = () => {
     <div>
       <div className="video-container">
         <video src={videoBg} autoPlay loop muted />
-        <button>learn more</button>
+        <button className="home-learn-more-btn">learn more</button>
       </div>
     </div>
   );

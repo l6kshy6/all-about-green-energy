@@ -1,3 +1,21 @@
 .video-container {
+  position: relative;
+}
+
+video {
   width: 100%;
+}
+
+.home-learn-more-btn {
+  position: absolute; /* set button to an absolute position */
+  top: 90%; /* adjust the top position of the button */
+  left: 50%; /* adjust the left position of the button */
+  transform: translate(-50%, -50%); /* center the button */
+  z-index: 2;
+  background-color: #e6e88a;
+  color: #618d59;
+}
+
+.home-learn-more-btn:hover {
+  background-color: #eff0a6;
 }
