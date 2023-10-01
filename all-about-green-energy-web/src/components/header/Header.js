@@ -3,7 +3,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <nav className="nav">
+    <nav className="nav nav-home">
       <Link to="/" className="header-child logo">
         All about green energy.
       </Link>
