@@ -9,13 +9,18 @@ const Header = () => {
       </Link>
       <ul>
         <li>
-          <Link to="/about-us" className="header-child">
-            about us
+          <Link to="/living-green" className="header-child">
+            <button>living green</button>
           </Link>
         </li>
         <li>
           <Link to="/learn-more" className="header-child">
-            learn more
+            <button>learn more</button>
+          </Link>
+        </li>
+        <li>
+          <Link to="/about-us" className="header-child">
+            <button>about us</button>
           </Link>
         </li>
       </ul>

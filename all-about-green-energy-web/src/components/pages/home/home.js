@@ -4,7 +4,10 @@ import "./home.css";
 const Home = () => {
   return (
     <div>
-      <video src={videoBg} autoPlay loop muted />
+      <div className="video-container">
+        <video src={videoBg} autoPlay loop muted />
+        <button>learn more</button>
+      </div>
     </div>
   );
 };

@@ -24,3 +24,18 @@
 .logo {
   font-size: 50px;
 }
+
+button {
+  font-family: inherit;
+  padding: 15px;
+  font-size: 25px;
+  border-radius: 25px;
+  border-style: none;
+  background-color: #618d59;
+  color: #e6e88a;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #709f68;
+}
