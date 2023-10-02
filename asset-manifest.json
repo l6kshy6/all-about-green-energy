@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/all-about-green-energy/static/css/main.b4fa3c36.css",
+    "main.js": "/all-about-green-energy/static/js/main.a8f3e0aa.js",
+    "static/js/787.b3f57bff.chunk.js": "/all-about-green-energy/static/js/787.b3f57bff.chunk.js",
+    "static/media/bg.mp4": "/all-about-green-energy/static/media/bg.93e8ac2df458c28d54a8.mp4",
+    "index.html": "/all-about-green-energy/index.html",
+    "main.b4fa3c36.css.map": "/all-about-green-energy/static/css/main.b4fa3c36.css.map",
+    "main.a8f3e0aa.js.map": "/all-about-green-energy/static/js/main.a8f3e0aa.js.map",
+    "787.b3f57bff.chunk.js.map": "/all-about-green-energy/static/js/787.b3f57bff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4fa3c36.css",
+    "static/js/main.a8f3e0aa.js"
+  ]
+}
