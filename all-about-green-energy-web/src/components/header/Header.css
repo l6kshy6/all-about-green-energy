@@ -1,6 +1,6 @@
 .nav {
   top: 0;
-  background-color: #e6e88a;
+  background-color: #85b07e;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +12,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: #e6e88a7a;
+  background-color: #85b07e7a;
 }
 
 .nav ul {
