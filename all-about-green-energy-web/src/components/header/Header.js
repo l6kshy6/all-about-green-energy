@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <nav className="nav nav-home">
+    <nav className={`nav ${props.navHome ? "nav-home" : ""}`}>
       <Link to="/" className="header-child logo">
         All about green energy.
       </Link>
