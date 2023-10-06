@@ -1,4 +1,5 @@
 .video-container {
+  background-color: #618d59;
   position: relative;
 }
 
@@ -20,4 +21,37 @@ video {
 
 .home-learn-more-btn:hover {
   background-color: #eff0a6;
+}
+
+.big-text {
+  font-size: 60px;
+}
+
+.regular-text {
+  font-size: 30px;
+}
+
+.text-container {
+  background-color: #53754d;
+  padding: 15px;
+}
+
+.text {
+  color: #e6e88a;
+}
+
+.half {
+  border-radius: 30px;
+}
+
+.half-left {
+  padding-right: 7.5px;
+  width: 50%;
+  display: inline-block;
+}
+
+.half-rigth {
+  padding-left: 7.5px;
+  width: 50%;
+  display: inline-block;
 }
