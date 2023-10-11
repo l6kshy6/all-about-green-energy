@@ -6,14 +6,13 @@ import AboutUs from "./components/pages/about-us/AboutUs";
 
 function App() {
   const location = useLocation();
-  const navHome = location.pathname == "/" || location.pathname == "/home";
+  const navHome = location.pathname == "/all-about-green-energy";
   return (
     <div className="App">
       {navHome ? null : <Header navHome={false} />}
       <Routes>
-        <Route path="" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/all-about-green-energy" element={<Home />} />
+        <Route path="/all-about-green-energy/about-us" element={<AboutUs />} />
       </Routes>
       {navHome ? <Header navHome={true} /> : null}
     </div>
