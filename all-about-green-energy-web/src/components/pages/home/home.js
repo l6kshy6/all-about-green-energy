@@ -1,4 +1,4 @@
-import videoBg from "/Users/jeremiah/all-about-green-energy/all-about-green-energy/all-about-green-energy-web/src/bg.mp4";
+import videoBg from "./bg.mp4";
 import "./home.css";
 import PageContent from "../../PageContent";
 import { Fade } from "react-reveal";
