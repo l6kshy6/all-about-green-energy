@@ -6,7 +6,7 @@
 video {
   height: 100vh;
   width: 100%;
-  object-fit: none;
+  object-fit: fill;
 }
 
 .home-learn-more-btn {
