@@ -1,6 +1,6 @@
 .nav {
   top: 0;
-  background-color: #85b07e;
+  background-color: #c6eebf;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +12,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: #85b07e7a;
+  background-color: #c6eebf7a;
 }
 
 .nav ul {
@@ -24,6 +24,7 @@
 }
 
 .header-child {
+  font-weight: 800;
   color: #618d59;
   text-decoration: none;
   font-size: 25px;
@@ -36,14 +37,16 @@
 button {
   font-family: inherit;
   padding: 15px;
+  padding-right: 25px;
+  padding-left: 25px;
   font-size: 25px;
-  border-radius: 25px;
+  border-radius: 10px;
   border-style: none;
-  background-color: #618d59;
-  color: #e6e88a;
+  background-color: #aedea6;
+  color: #2f3019;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: #709f68;
+  background-color: #9ecc96;
 }

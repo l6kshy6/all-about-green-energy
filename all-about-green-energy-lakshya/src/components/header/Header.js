@@ -9,12 +9,18 @@ const Header = (props) => {
       </Link>
       <ul>
         <li>
-          <Link to="/all-about-green-energy/living-green" className="header-child">
+          <Link
+            to="/all-about-green-energy/living-green"
+            className="header-child"
+          >
             <button>Living green</button>
           </Link>
         </li>
         <li>
-          <Link to="/all-about-green-energy" className="header-child">
+          <Link
+            to="/all-about-green-energy/learn-more"
+            className="header-child"
+          >
             <button>Learn more</button>
           </Link>
         </li>

@@ -1,5 +1,4 @@
 .video-container {
-  background-color: #618d59;
   position: relative;
 }
 
@@ -16,7 +15,6 @@ video {
   transform: translate(-50%, -50%); /* center the button */
   z-index: 2;
   background-color: #e6e88a;
-  color: #618d59;
 }
 
 .home-learn-more-btn:hover {
@@ -24,7 +22,7 @@ video {
 }
 
 .half {
-  border-radius: 60px;
+  border-radius: 10px;
   width: 40%;
   height: 500px;
   object-fit: cover;
