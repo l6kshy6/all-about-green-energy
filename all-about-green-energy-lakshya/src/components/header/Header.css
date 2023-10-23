@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding: 30px;
+  padding: 15px;
 }
 
 .nav-home {
@@ -36,10 +36,10 @@
 
 button {
   font-family: inherit;
-  padding: 15px;
-  padding-right: 25px;
-  padding-left: 25px;
-  font-size: 25px;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 20px;
   border-radius: 10px;
   border-style: none;
   background-color: #aedea6;
@@ -48,5 +48,5 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: #9ecc96;
+  background-color: #a1d298;
 }

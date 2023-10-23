@@ -49,7 +49,9 @@ const AboutUs = () => {
   ];
   return (
     <PageContent>
-      <p className="page-head">About Us</p>
+      <Fade bottom>
+        <p className="page-head">About Us</p>
+      </Fade>
       {aboutUsContent.map((item, index) => (
         <Fade bottom>
           <div className="content-container">

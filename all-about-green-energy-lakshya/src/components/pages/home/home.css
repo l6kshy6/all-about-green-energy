@@ -33,5 +33,5 @@ video {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  padding: 15px;
+  margin-bottom: 60px;
 }

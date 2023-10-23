@@ -24,7 +24,6 @@ const Home = () => {
       ],
       img: "https://u4d2z7k9.rocketcdn.me/wp-content/uploads/2023/07/Untitled-683-%C3%97-1024px-1024-%C3%97-683px-2023-07-12T154605.688.jpg",
       btnIndex: 1,
-      btnRoute: "",
     },
     {
       title: "What about clean energy?",
@@ -34,7 +33,6 @@ const Home = () => {
       ],
       img: "https://c02.purpledshub.com/uploads/sites/48/2023/02/why-sky-blue-2db86ae.jpg",
       btnIndex: 1,
-      btnRoute: "",
     },
   ];
 
