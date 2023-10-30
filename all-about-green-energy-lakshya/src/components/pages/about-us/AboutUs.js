@@ -50,7 +50,7 @@ const AboutUs = () => {
   return (
     <PageContent>
       <Fade bottom>
-        <p className="page-head">About Us</p>
+        <p className="page-head">About us</p>
       </Fade>
       {aboutUsContent.map((item, index) => (
         <Fade bottom>

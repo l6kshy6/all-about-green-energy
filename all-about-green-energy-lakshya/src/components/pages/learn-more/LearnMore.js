@@ -1,14 +1,46 @@
 import { Fade } from "react-reveal";
 import Text from "../../Text";
 import PageContent from "../../PageContent";
+import ArrowForward from "./ArrowForward";
+import ArrowBack from "./ArrowBack";
+import "./LearnMore.css";
+import { useState } from "react";
 
 const LearnMore = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const [animation, setAnimation] = useState(600);
+
   const isEven = (num) => {
     if (num % 2 == 0) {
       return true;
     }
     return false;
   };
+
+  const ArrowForwardHandler = () => {
+    if (slideIndex !== slides.length - 1) {
+      setSlideIndex(slideIndex + 1);
+      setAnimation(animation - 1140);
+    }
+  };
+  const ArrowBackHandler = () => {
+    if (slideIndex !== 0) {
+      setSlideIndex(slideIndex - 1);
+      setAnimation(animation + 1140);
+    }
+  };
+
+  const slides = [
+    {
+      type: "Solar",
+      img: "https://www.marketplace.org/wp-content/uploads/2023/01/GettyImages-1336080074.jpg?fit=3800%2C2533",
+    },
+    {
+      type: "Wind",
+      img: "https://www.treehugger.com/thmb/tPH_RvCSAC71lrHLaG7pLlK3bJ4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-505412046-0728e5aa8a1c417aa3837f363126cb96.jpg",
+    },
+  ];
+
   const learnMoreContent = [
     {
       title: "Is it the same as renewable energy?",
@@ -28,7 +60,7 @@ const LearnMore = () => {
   return (
     <PageContent>
       <Fade bottom>
-        <p className="page-head">Learn more about green energy.</p>
+        <p className="page-head">Learn more about green energy</p>
       </Fade>
       {learnMoreContent.map((item, index) => (
         <Fade bottom>
@@ -46,6 +78,22 @@ const LearnMore = () => {
           </div>
         </Fade>
       ))}
+      <p className="big-text">Types of clean energy</p>
+      <div className="slide-container">
+        <div
+          className="slide-img-container"
+          style={{ transform: `translate(${animation}px)` }}
+        >
+          {slides.map((slide) => (
+            <div className={animation}>
+              <p className="slide-head">{slide.type}</p>
+              <img className="slide-img" src={slide.img} />
+            </div>
+          ))}
+        </div>
+        <ArrowForward onArrowForward={ArrowForwardHandler} />
+        <ArrowBack onArrowBack={ArrowBackHandler} />
+      </div>
     </PageContent>
   );
 };

@@ -1,18 +1,24 @@
 .nav {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
   top: 0;
+  background-color: #c6eebf;
   background-color: #c6eebf;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding: 15px;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .nav-home {
-  position: absolute;
+  background-color: #c6eebf00;
+  position: fixed;
   top: 0;
   width: 100%;
-  background-color: #c6eebf7a;
 }
 
 .nav ul {
@@ -28,6 +34,7 @@
   color: #618d59;
   text-decoration: none;
   font-size: 25px;
+  letter-spacing: -2px;
 }
 
 .logo {
@@ -40,10 +47,11 @@ button {
   padding-right: 20px;
   padding-left: 20px;
   font-size: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   border-style: none;
   background-color: #aedea6;
   color: #2f3019;
+  transition: 400ms;
 }
 
 button:hover {

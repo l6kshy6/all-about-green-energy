@@ -50,6 +50,9 @@ const Home = () => {
     }
   };
 
+  // const video = document.querySelector("video");
+  // video.playbackRate = 0.75;
+
   return (
     <div>
       <div className="video-container">

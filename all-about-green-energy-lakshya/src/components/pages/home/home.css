@@ -10,7 +10,7 @@ video {
 
 .home-learn-more-btn {
   position: absolute; /* set button to an absolute position */
-  top: 90%; /* adjust the top position of the button */
+  top: 85%; /* adjust the top position of the button */
   left: 50%; /* adjust the left position of the button */
   transform: translate(-50%, -50%); /* center the button */
   z-index: 2;
