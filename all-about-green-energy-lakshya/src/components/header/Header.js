@@ -1,9 +1,19 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = (props) => {
+  const [scroll, setScroll] = useState(0);
+  window.addEventListener("scroll", (e) => {
+    setScroll(window.scrollY);
+  });
+
   return (
-    <nav className={`nav ${props.navHome ? "nav-home" : ""}`}>
+    <nav
+      className={`nav ${props.navHome ? "nav-home" : ""} ${
+        scroll > 0 && props.navHome ? "burger" : ""
+      }`}
+    >
       <Link to="/all-about-green-energy" className="header-child logo">
         All about green energy.
       </Link>

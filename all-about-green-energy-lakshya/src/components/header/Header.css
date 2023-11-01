@@ -4,7 +4,6 @@
   z-index: 100;
   top: 0;
   background-color: #c6eebf;
-  background-color: #c6eebf;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,6 +11,7 @@
   padding: 10px;
   padding-left: 50px;
   padding-right: 50px;
+  transition: 400ms linear;
 }
 
 .nav-home {
@@ -57,4 +57,8 @@ button {
 button:hover {
   cursor: pointer;
   background-color: #a1d298;
+}
+
+.burger {
+  background-color: #c6eebf;
 }

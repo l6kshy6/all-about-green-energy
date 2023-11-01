@@ -1,6 +1,6 @@
 .slide-img {
   width: 1080px;
-  height: 750px;
+  height: 500px;
   object-fit: cover;
   border-radius: 10px;
   margin-right: 60px;
@@ -9,8 +9,6 @@
 
 .slide-container {
   position: relative;
-  transform: translateX(0);
-  transition: 400ms;
 }
 
 .slide-head {
@@ -25,10 +23,9 @@
   z-index: 100;
   fill: white;
   top: 50%;
-  transform: translateY(-50%);
   cursor: pointer;
   transition: 400ms;
-  transform: translateX(0);
+  transform: translate(0, -50%);
 }
 
 .arrow-right {
@@ -44,18 +41,71 @@
 }
 
 .arrow-right:hover {
-  transform: translateX(-10%);
+  transform: translate(-10%, -50%);
 }
 
 .arrow-left:hover {
-  transform: translateX(10%);
+  transform: translate(10%, -50%);
 }
 
 .slide-img-container {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   transform: translateX(0);
   transition: 800ms;
+}
+
+.slider-btn-container {
+  position: absolute;
+  bottom: 25px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 40px;
+  gap: 10px;
+}
+
+.slider-btn {
+  border-radius: 10px;
+}
+
+.circle {
+  background-color: white;
+  fill: white;
+  border-radius: 24px;
+  transition: 400ms;
+  cursor: pointer;
+}
+
+.circle:hover {
+  background-color: rgb(236, 236, 236);
+  fill: rgb(236, 236, 236);
+}
+
+.circle-selected {
+  background-color: rgb(189, 189, 189);
+  fill: rgb(189, 189, 189);
+}
+
+.circle-selected:hover {
+  background-color: rgb(189, 189, 189);
+  fill: rgb(189, 189, 189);
+}
+
+.slider-content {
+  position: absolute;
+  text-align: center;
+  color: white;
+  bottom: 75px;
+  width: 800px;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 5px;
 }

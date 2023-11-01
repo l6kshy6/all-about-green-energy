@@ -5,16 +5,24 @@ import ArrowForward from "./ArrowForward";
 import ArrowBack from "./ArrowBack";
 import "./LearnMore.css";
 import { useState } from "react";
+import Circle from "./Circle";
 
 const LearnMore = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const [animation, setAnimation] = useState(600);
+  const [animation, setAnimation] = useState(0);
 
   const isEven = (num) => {
     if (num % 2 == 0) {
       return true;
     }
     return false;
+  };
+
+  const circleClickHandler = (i) => {
+    const indexDiff = slideIndex - i;
+    setAnimation(animation + indexDiff * 1140);
+    setSlideIndex(i);
+    console.log("circleClickHandler activated!!!");
   };
 
   const ArrowForwardHandler = () => {
@@ -34,10 +42,20 @@ const LearnMore = () => {
     {
       type: "Solar",
       img: "https://www.marketplace.org/wp-content/uploads/2023/01/GettyImages-1336080074.jpg?fit=3800%2C2533",
+      content:
+        "Solar technologies convert sunlight into electrical energy either through photovoltaic (PV) panels or through mirrors that concentrate solar radiation. The average solar panel has a power output rating of 250 to 400 watts (W) and generates around 1.5 kilowatt-hours (kWh) of energy per day.",
     },
     {
       type: "Wind",
       img: "https://www.treehugger.com/thmb/tPH_RvCSAC71lrHLaG7pLlK3bJ4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-505412046-0728e5aa8a1c417aa3837f363126cb96.jpg",
+      content:
+        "Wind is converted into electricity using the aerodynamic force from the rotor blades. More specifically, wind flows across the blade and the air pressure on one side of the blade decreases. The difference in air pressure across the two sides of the blade creates both lift and drag.",
+    },
+    {
+      type: "Hydro",
+      img: "https://conservativeenergynetwork.org/wp-content/uploads/2022/09/cfa-hydropower.jpg",
+      content:
+        "Hydropower is an affordable source of electricity, due to relying only on the energy from moving water. This source of energy holds these relatively low costs throughout the duration of a full project lifetime in terms of maintenance, operations, and fuel.",
     },
   ];
 
@@ -78,22 +96,39 @@ const LearnMore = () => {
           </div>
         </Fade>
       ))}
-      <p className="big-text">Types of clean energy</p>
-      <div className="slide-container">
-        <div
-          className="slide-img-container"
-          style={{ transform: `translate(${animation}px)` }}
-        >
-          {slides.map((slide) => (
-            <div className={animation}>
-              <p className="slide-head">{slide.type}</p>
-              <img className="slide-img" src={slide.img} />
-            </div>
-          ))}
+      <Fade bottom>
+        <p className="big-text">Types of clean energy</p>
+        <div className="slide-container">
+          <div
+            className="slide-img-container"
+            style={{ transform: `translate(${animation}px)` }}
+          >
+            {slides.map((slide) => (
+              <div className="slide">
+                <p className="slide-head">{slide.type}</p>
+                <p className="slider-content">{slide.content}</p>
+                <div className="slide-img-behind" />
+                <img className="slide-img" src={slide.img} />
+              </div>
+            ))}
+          </div>
+          {slideIndex !== slides.length - 1 ? (
+            <ArrowForward onArrowForward={ArrowForwardHandler} />
+          ) : null}
+          {slideIndex !== 0 ? (
+            <ArrowBack onArrowBack={ArrowBackHandler} />
+          ) : null}
+          <div className="slider-btn-container">
+            {slides.map((slide, i) => (
+              <Circle
+                index={i}
+                onCircleClick={circleClickHandler}
+                selected={i == slideIndex ? true : false}
+              />
+            ))}
+          </div>
         </div>
-        <ArrowForward onArrowForward={ArrowForwardHandler} />
-        <ArrowBack onArrowBack={ArrowBackHandler} />
-      </div>
+      </Fade>
     </PageContent>
   );
 };
