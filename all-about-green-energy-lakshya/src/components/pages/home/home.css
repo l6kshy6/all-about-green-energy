@@ -4,6 +4,7 @@
 
 video {
   height: 100vh;
+  left: 0;
   width: 100%;
   object-fit: fill;
 }
@@ -15,6 +16,10 @@ video {
   transform: translate(-50%, -50%); /* center the button */
   z-index: 2;
   background-color: #e6e88a;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 25px;
 }
 
 .home-learn-more-btn:hover {

@@ -20,6 +20,14 @@ const Header = (props) => {
       <ul>
         <li>
           <Link
+            to="/all-about-green-energy/climate-change"
+            className="header-child"
+          >
+            <button>Climate change</button>
+          </Link>
+        </li>
+        <li>
+          <Link
             to="/all-about-green-energy/living-green"
             className="header-child"
           >

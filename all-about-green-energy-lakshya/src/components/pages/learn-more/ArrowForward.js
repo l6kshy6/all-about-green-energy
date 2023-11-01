@@ -7,7 +7,7 @@ const ArrowForward = (props) => {
       height="75"
       viewBox="0 -960 960 960"
       width="75"
-      className="slide-arrow arrow-right"
+      className={`slide-arrow arrow-right ${props.show ? "arrow-show" : ""}`}
       onClick={props.onArrowForward}
     >
       <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />

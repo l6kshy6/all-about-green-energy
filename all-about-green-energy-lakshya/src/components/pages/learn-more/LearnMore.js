@@ -22,7 +22,6 @@ const LearnMore = () => {
     const indexDiff = slideIndex - i;
     setAnimation(animation + indexDiff * 1140);
     setSlideIndex(i);
-    console.log("circleClickHandler activated!!!");
   };
 
   const ArrowForwardHandler = () => {
@@ -112,12 +111,11 @@ const LearnMore = () => {
               </div>
             ))}
           </div>
-          {slideIndex !== slides.length - 1 ? (
-            <ArrowForward onArrowForward={ArrowForwardHandler} />
-          ) : null}
-          {slideIndex !== 0 ? (
-            <ArrowBack onArrowBack={ArrowBackHandler} />
-          ) : null}
+          <ArrowForward
+            onArrowForward={ArrowForwardHandler}
+            show={slideIndex == slides.length - 1}
+          />
+          <ArrowBack onArrowBack={ArrowBackHandler} show={slideIndex == 0} />
           <div className="slider-btn-container">
             {slides.map((slide, i) => (
               <Circle

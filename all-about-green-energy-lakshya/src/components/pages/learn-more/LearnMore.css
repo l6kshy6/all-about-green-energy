@@ -109,3 +109,11 @@
   border-radius: 5px;
   padding: 5px;
 }
+
+.arrow-show {
+  fill: transparent;
+}
+
+.arrow-show:hover {
+  fill: transparent;
+}

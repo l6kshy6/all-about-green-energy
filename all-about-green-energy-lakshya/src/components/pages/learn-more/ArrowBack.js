@@ -5,7 +5,7 @@ const ArrowBack = (props) => {
       height="75"
       viewBox="0 -960 960 960"
       width="75"
-      className="slide-arrow arrow-left"
+      className={`slide-arrow arrow-left ${props.show ? "arrow-show" : ""}`}
       onClick={props.onArrowBack}
     >
       <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
