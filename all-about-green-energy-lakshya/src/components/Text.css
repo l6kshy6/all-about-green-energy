@@ -16,11 +16,29 @@
   width: 60%;
 }
 
-.text__button {
-  margin-left: 30px;
-  background-color: #dbdbd9;
+.text__button {   
+  position:absolute;
+  margin-left:-10px;
+  transform: translateY(-5px);
+  background-color: #dbdbd900;      /*yes, its just a clear button rn, but im lazy sooooooo*/
+  color:blue;
+}
+
+.text__button::before {
+  content:"";
+  position:absolute;
+  margin-bottom:7px;
+  width: 0;
+  bottom:0;
+  height:2px;
+  background-color: blue;
+  transition: width 100ms ease-in;
+}
+
+.text__button:hover::before{
+  width:77%;
 }
 
 .text__button:hover {
-  background-color: #cdcdcd;
+  background-color: #cdcdcd00;
 }

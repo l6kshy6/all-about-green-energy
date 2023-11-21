@@ -22,6 +22,23 @@ video {
   font-size: 25px;
 }
 
+.home-learn-more-btn::before{
+  content:'';
+  position:absolute;
+  width:0;
+  height:5px;
+  bottom:-7px;
+  right:0;
+  left:0;
+  background-color: #eff0a6;
+  border-radius:500px;
+  transition: width 100ms ease-out;
+}
+
+.home-learn-more-btn:hover::before{
+  width:100%;
+}
+
 .home-learn-more-btn:hover {
   background-color: #eff0a6;
 }
