@@ -1,11 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "./logo.png";
 import "./Header.css";
 
 const Header = (props) => {
   const [scroll, setScroll] = useState(0);
-  window.addEventListener("scroll", (e) => {
+  const [width, setWidth] = useState(window.innerWidth);
+  window.addEventListener("scroll", () => {
     setScroll(window.scrollY);
+  });
+  window.addEventListener("resize", () => {
+    setWidth(window.innerWidth);
   });
 
   return (
@@ -15,7 +20,11 @@ const Header = (props) => {
       }`}
     >
       <Link to="/all-about-green-energy" className="header-child logo">
-        All about green energy.
+        {width > 1100 ? (
+          "All about green energy."
+        ) : (
+          <img src={logo} className="logo-img"></img>
+        )}
       </Link>
       <ul>
         <li>

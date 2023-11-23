@@ -6,7 +6,7 @@ const Text = (props) => {
     return (
       <Link to={props.btnRoute}>
         <button onClick={props.clickHandler} className="text__button">
-          Learn More
+          Learn more
         </button>
       </Link>
     );
@@ -18,9 +18,10 @@ const Text = (props) => {
         <p className="big-text">{props.bigText}</p>
         {props.regularText.map((text, index) => {
           return (
-            <p className="regular-text">
-              {text} {index == props.btnIndex ? <Button /> : ""}
-            </p>
+            <>
+              <p className="regular-text">{text}</p>
+              {index == props.btnIndex ? <Button /> : ""}
+            </>
           );
         })}
       </div>

@@ -16,27 +16,26 @@
   width: 60%;
 }
 
-.text__button {   
-  position:absolute;
-  margin-left:-10px;
-  transform: translateY(-5px);
-  background-color: #dbdbd900;      /*yes, its just a clear button rn, but im lazy sooooooo*/
-  color:blue;
+.text__button {
+  position: absolute;
+  background-color: #dbdbd900; /*yes, its just a clear button rn, but im lazy sooooooo*/
+  color: blue;
+  padding: 0;
 }
 
 .text__button::before {
-  content:"";
-  position:absolute;
-  margin-bottom:7px;
+  content: "";
+  position: absolute;
+  margin-bottom: 0px;
   width: 0;
-  bottom:0;
-  height:2px;
+  bottom: 0;
+  height: 2px;
   background-color: blue;
-  transition: width 100ms ease-in;
+  transition: width 300ms ease-in;
 }
 
-.text__button:hover::before{
-  width:77%;
+.text__button:hover::before {
+  width: 100%;
 }
 
 .text__button:hover {
