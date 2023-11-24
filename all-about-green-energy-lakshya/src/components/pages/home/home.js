@@ -3,8 +3,19 @@ import "./home.css";
 import PageContent from "../../PageContent";
 import { Fade } from "react-reveal";
 import Text from "../../Text";
+import { useState } from "react";
+import ExpandArrow from "./ExpandArrow";
 
 const Home = () => {
+  const [expandArrowActive, setExpandArrowActive] = useState(false);
+
+  const mouseEnterHandler = () => {
+    setExpandArrowActive(true);
+  };
+  const mouseLeaveHandler = () => {
+    setExpandArrowActive(false);
+  };
+
   const homeContent = [
     {
       title: "What even is green energy?",
@@ -56,8 +67,24 @@ const Home = () => {
     <div>
       <div className="video-container">
         <video src={videoBg} autoPlay loop muted />
-        <button className="home-learn-more-btn" onClick={toLearnMoreHandler}>
+        <button
+          className="home-learn-more-btn"
+          onClick={toLearnMoreHandler}
+          onMouseEnter={mouseEnterHandler}
+          onMouseLeave={mouseLeaveHandler}
+        >
           Explore
+          <div
+            className={`expand-arrow ${
+              expandArrowActive ? "expand-arrow-active" : ""
+            }`}
+          >
+            <ExpandArrow
+              className={`expand-arrow-svg ${
+                expandArrowActive ? "expand-arrow-svg-active" : ""
+              }`}
+            />
+          </div>
         </button>
       </div>
       <PageContent>

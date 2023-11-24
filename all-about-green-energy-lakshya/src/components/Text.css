@@ -29,7 +29,7 @@
   margin-bottom: 0px;
   width: 0;
   bottom: 0;
-  height: 2px;
+  height: 1px;
   background-color: blue;
   transition: width 300ms ease-in;
 }

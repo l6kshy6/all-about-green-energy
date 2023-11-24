@@ -6,13 +6,17 @@
   height: 100vh;
   z-index: 200;
   background-color: #c6eebf;
-  text-align: left;
-  padding: 10px;
+  text-align: right;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.25);
   transition: 400ms;
+}
+
+.side-bar li {
+  list-style-type: none;
 }
 
 .side-bar-active {
@@ -25,4 +29,9 @@
     right: 50px;
     left: 0;
   }
+}
+
+.side-bar button {
+  text-align: right;
+  width: 100%;
 }

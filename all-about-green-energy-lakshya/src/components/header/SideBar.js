@@ -9,43 +9,37 @@ const SideBar = (props) => {
       onMouseEnter={props.onMouseEnter}
       onMouseLeave={props.onMouseLeave}
     >
-      <Link
-        to="/all-about-green-energy"
-        className="header-child side-bar-child logo"
-      >
+      <Link to="/all-about-green-energy" className="header-child logo">
         All about green energy.
       </Link>
       <ul>
         <li>
           <Link
             to="/all-about-green-energy/climate-change"
-            className="header-child side-bar-child"
+            className="header-child"
           >
-            <button>Climate change</button>
+            <button className="side-bar-child">Climate change</button>
           </Link>
         </li>
         <li>
           <Link
             to="/all-about-green-energy/living-green"
-            className="header-child side-bar-child"
+            className="header-child"
           >
-            <button>Living green</button>
+            <button className="side-bar-child">Living green</button>
           </Link>
         </li>
         <li>
           <Link
             to="/all-about-green-energy/learn-more"
-            className="header-child side-bar-child"
+            className="header-child"
           >
-            <button>Learn more</button>
+            <button className="side-bar-child">Learn more</button>
           </Link>
         </li>
         <li>
-          <Link
-            to="/all-about-green-energy/about-us"
-            className="header-child side-bar-child"
-          >
-            <button>About us</button>
+          <Link to="/all-about-green-energy/about-us" className="header-child">
+            <button className="side-bar-child">About us</button>
           </Link>
         </li>
       </ul>
