@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/all-about-green-energy/static/css/main.d2a1ab61.css",
-    "main.js": "/all-about-green-energy/static/js/main.69f1b37d.js",
+    "main.css": "/all-about-green-energy/static/css/main.693d5135.css",
+    "main.js": "/all-about-green-energy/static/js/main.1d9bb2e2.js",
     "static/js/787.b3f57bff.chunk.js": "/all-about-green-energy/static/js/787.b3f57bff.chunk.js",
     "static/media/bg.mp4": "/all-about-green-energy/static/media/bg.9e5faa91f903baa47b09.mp4",
     "static/media/logo.png": "/all-about-green-energy/static/media/logo.f37195d87999ac1b3f90.png",
     "index.html": "/all-about-green-energy/index.html",
-    "main.d2a1ab61.css.map": "/all-about-green-energy/static/css/main.d2a1ab61.css.map",
-    "main.69f1b37d.js.map": "/all-about-green-energy/static/js/main.69f1b37d.js.map",
+    "main.693d5135.css.map": "/all-about-green-energy/static/css/main.693d5135.css.map",
+    "main.1d9bb2e2.js.map": "/all-about-green-energy/static/js/main.1d9bb2e2.js.map",
     "787.b3f57bff.chunk.js.map": "/all-about-green-energy/static/js/787.b3f57bff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2a1ab61.css",
-    "static/js/main.69f1b37d.js"
+    "static/css/main.693d5135.css",
+    "static/js/main.1d9bb2e2.js"
   ]
 }
