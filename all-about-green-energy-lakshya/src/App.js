@@ -6,19 +6,29 @@ import AboutUs from "./components/pages/about-us/AboutUs";
 import LearnMore from "./components/pages/learn-more/LearnMore";
 import LivingGreen from "./components/pages/living-green/LivingGreen";
 import ClimateChange from "./components/pages/climate-change/ClimateChange";
+import { useState } from "react";
 
 function App() {
+  const [appClickHandler, setAppClickHandler] = useState(() => {});
+
   const element = document.querySelector(".App");
   if (element) {
     element.scrollIntoView();
   }
   const location = useLocation();
+
+  const getOnAppClickHandler = (func) => {
+    setAppClickHandler(func);
+  };
+
   const navHome =
     location.pathname == "/all-about-green-energy" ||
     location.pathname == "/all-about-green-energy/";
   return (
-    <div className="App">
-      {navHome ? null : <Header navHome={false} />}
+    <div className="App" onClick={appClickHandler}>
+      {navHome ? null : (
+        <Header navHome={false} getOnAppClick={getOnAppClickHandler} />
+      )}
       <Routes>
         <Route path="/all-about-green-energy" element={<Home />} />
         <Route path="/all-about-green-energy/about-us" element={<AboutUs />} />
@@ -35,7 +45,9 @@ function App() {
           element={<ClimateChange />}
         />
       </Routes>
-      {navHome ? <Header navHome={true} /> : null}
+      {navHome ? (
+        <Header navHome={true} getOnAppClick={getOnAppClickHandler} />
+      ) : null}
     </div>
   );
 }

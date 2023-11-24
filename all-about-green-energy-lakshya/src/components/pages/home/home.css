@@ -6,7 +6,7 @@ video {
   height: 100vh;
   left: 0;
   width: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .home-learn-more-btn {
@@ -27,11 +27,12 @@ video {
   position: absolute;
   width: 0;
   height: 5px;
-  bottom: 0px;
+  bottom: -1px;
   right: 0;
   left: 0;
-  background-color: #c6eebf;
-  border-radius: 500px;
+  background-color: #618d59;
+  border-bottom-right-radius: 500px;
+  border-bottom-left-radius: 500px;
   transition: width 300ms ease-out;
 }
 
