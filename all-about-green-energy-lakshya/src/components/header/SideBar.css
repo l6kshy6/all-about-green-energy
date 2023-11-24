@@ -23,14 +23,6 @@
   transform: translateX(0);
 }
 
-@media only screen and (max-width: 550px) {
-  .side-bar {
-    width: auto;
-    right: 50px;
-    left: 0;
-  }
-}
-
 .side-bar button {
   text-align: left;
   width: 100%;
