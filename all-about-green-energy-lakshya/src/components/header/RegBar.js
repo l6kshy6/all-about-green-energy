@@ -4,13 +4,6 @@ import logo from "./logo.png";
 const RegBar = (props) => {
   return (
     <>
-      <Link to="/all-about-green-energy" className="header-child logo">
-        {props.width > 1100 ? (
-          "All about green energy."
-        ) : (
-          <img src={logo} className="logo-img"></img>
-        )}
-      </Link>
       <ul>
         <li>
           <Link

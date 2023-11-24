@@ -6,8 +6,6 @@ const MenuSVG = (props) => (
     width="50"
     className="menu-svg"
     onClick={props.onClick}
-    onMouseEnter={props.onMouseEnter}
-    onMouseLeave={props.onMouseLeave}
   >
     <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
   </svg>

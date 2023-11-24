@@ -1,17 +1,15 @@
 import { Link } from "react-router-dom";
 import "./SideBar.css";
-import logo from "./logo.png";
+import CloseSVG from "./CloseSVG";
 
 const SideBar = (props) => {
+  const closeClickHandler = () => {
+    props.setSideBarActive(false);
+  };
+
   return (
-    <div
-      className={props.className}
-      onMouseEnter={props.onMouseEnter}
-      onMouseLeave={props.onMouseLeave}
-    >
-      <Link to="/all-about-green-energy" className="header-child logo">
-        All about green energy.
-      </Link>
+    <div className={props.className}>
+      <CloseSVG onClick={closeClickHandler} />
       <ul>
         <li>
           <Link
