@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/all-about-green-energy/static/css/main.ecf64897.css",
-    "main.js": "/all-about-green-energy/static/js/main.c4a1ddec.js",
+    "main.js": "/all-about-green-energy/static/js/main.f8c9058e.js",
     "static/js/787.b3f57bff.chunk.js": "/all-about-green-energy/static/js/787.b3f57bff.chunk.js",
     "static/media/bg.mp4": "/all-about-green-energy/static/media/bg.2f0bf9ff8fb1e84eb633.mp4",
     "static/media/logo.png": "/all-about-green-energy/static/media/logo.f37195d87999ac1b3f90.png",
     "index.html": "/all-about-green-energy/index.html",
     "main.ecf64897.css.map": "/all-about-green-energy/static/css/main.ecf64897.css.map",
-    "main.c4a1ddec.js.map": "/all-about-green-energy/static/js/main.c4a1ddec.js.map",
+    "main.f8c9058e.js.map": "/all-about-green-energy/static/js/main.f8c9058e.js.map",
     "787.b3f57bff.chunk.js.map": "/all-about-green-energy/static/js/787.b3f57bff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ecf64897.css",
-    "static/js/main.c4a1ddec.js"
+    "static/js/main.f8c9058e.js"
   ]
 }
