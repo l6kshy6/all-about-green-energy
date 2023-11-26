@@ -64,6 +64,7 @@ const Home = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setExpandArrowActive(false);
   };
 
   return (
