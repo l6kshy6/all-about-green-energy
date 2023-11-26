@@ -1,5 +1,5 @@
 .slide-img {
-  width: 1080px;
+  width: 880px;
   height: 500px;
   object-fit: cover;
   border-radius: 10px;
@@ -36,9 +36,9 @@
   left: 20px;
 }
 
-.slide-arrow:hover {
+/* .slide-arrow:hover {
   fill: rgb(223, 223, 223);
-}
+} */
 
 .arrow-right:hover {
   transform: translate(-10%, -50%);
@@ -75,8 +75,8 @@
 }
 
 .circle {
-  background-color: white;
-  fill: white;
+  background-color: rgb(189, 189, 189);
+  fill: rgb(189, 189, 189);
   border-radius: 24px;
   transition: 400ms;
   cursor: pointer;
@@ -88,13 +88,8 @@
 }
 
 .circle-selected {
-  background-color: rgb(189, 189, 189);
-  fill: rgb(189, 189, 189);
-}
-
-.circle-selected:hover {
-  background-color: rgb(189, 189, 189);
-  fill: rgb(189, 189, 189);
+  background-color: white;
+  fill: white;
 }
 
 .slider-content {

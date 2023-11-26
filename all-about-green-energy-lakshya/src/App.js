@@ -6,13 +6,19 @@ import AboutUs from "./components/pages/about-us/AboutUs";
 import LearnMore from "./components/pages/learn-more/LearnMore";
 import LivingGreen from "./components/pages/living-green/LivingGreen";
 import ClimateChange from "./components/pages/climate-change/ClimateChange";
+import { useState } from "react";
 
 function App() {
+  const [width, setWidth] = useState(window.innerWidth);
   const element = document.querySelector(".App");
   if (element) {
     element.scrollIntoView();
   }
   const location = useLocation();
+
+  window.addEventListener("resize", () => {
+    setWidth(window.innerWidth);
+  });
 
   const navHome =
     location.pathname == "/all-about-green-energy" ||

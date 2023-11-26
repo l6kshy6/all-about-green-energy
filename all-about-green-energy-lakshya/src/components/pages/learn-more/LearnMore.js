@@ -20,20 +20,20 @@ const LearnMore = () => {
 
   const circleClickHandler = (i) => {
     const indexDiff = slideIndex - i;
-    setAnimation(animation + indexDiff * 1140);
+    setAnimation(animation + indexDiff * 940);
     setSlideIndex(i);
   };
 
   const ArrowForwardHandler = () => {
     if (slideIndex !== slides.length - 1) {
       setSlideIndex(slideIndex + 1);
-      setAnimation(animation - 1140);
+      setAnimation(animation - 940);
     }
   };
   const ArrowBackHandler = () => {
     if (slideIndex !== 0) {
       setSlideIndex(slideIndex - 1);
-      setAnimation(animation + 1140);
+      setAnimation(animation + 940);
     }
   };
 
