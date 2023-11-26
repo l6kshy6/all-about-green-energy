@@ -29,6 +29,7 @@
   margin-bottom: 0px;
   width: 0;
   bottom: 0;
+  right:0;
   height: 1px;
   background-color: blue;
   transition: width 300ms ease-in;
@@ -36,6 +37,7 @@
 
 .text__button:hover::before {
   width: 100%;
+  left:0;
 }
 
 .text__button:hover {

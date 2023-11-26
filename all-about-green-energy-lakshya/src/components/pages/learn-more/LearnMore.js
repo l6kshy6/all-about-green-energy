@@ -83,12 +83,12 @@ const LearnMore = () => {
         <Fade bottom>
           <div className="content-container">
             {isEven(index) ? (
-              <img src={item.img} className="half img" />
+              <img src={item.img} className="half img" style={{objectPosition:item.position}} />
             ) : (
               <Text bigText={item.title} regularText={item.text} />
             )}
             {!isEven(index) ? (
-              <img src={item.img} className="half img" />
+              <img src={item.img} className="half img" style={{objectPosition:item.position}} />
             ) : (
               <Text bigText={item.title} regularText={item.text} />
             )}
