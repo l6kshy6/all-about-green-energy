@@ -17,10 +17,11 @@
 }
 
 .text__button {
-  position: absolute;
+  position: relative;
   background-color: #dbdbd900; /*yes, its just a clear button rn, but im lazy sooooooo*/
   color: blue;
   padding: 0;
+  margin-bottom: 1px;
 }
 
 .text__button::before {
@@ -29,7 +30,7 @@
   margin-bottom: 0px;
   width: 0;
   bottom: 0;
-  right:0;
+  right: 0;
   height: 1px;
   background-color: blue;
   transition: width 300ms ease-in;
@@ -37,9 +38,17 @@
 
 .text__button:hover::before {
   width: 100%;
-  left:0;
+  left: 0;
 }
 
 .text__button:hover {
   background-color: #cdcdcd00;
+}
+
+@media only screen and (max-width: 800px) {
+  .text-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
 }

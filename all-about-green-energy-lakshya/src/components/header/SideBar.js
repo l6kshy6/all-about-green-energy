@@ -7,6 +7,11 @@ const SideBar = (props) => {
     props.setSideBarActive(false);
   };
 
+  const linkClickHandler = () => {
+    closeClickHandler();
+    props.setPageIsSet(false);
+  };
+
   return (
     <div className={props.className}>
       <CloseSVG onClick={closeClickHandler} />
@@ -16,7 +21,9 @@ const SideBar = (props) => {
             to="/all-about-green-energy/climate-change"
             className="header-child"
           >
-            <button className="side-bar-child">Climate change</button>
+            <button className="side-bar-child" onClick={linkClickHandler}>
+              Climate change
+            </button>
           </Link>
         </li>
         <li>
@@ -24,7 +31,9 @@ const SideBar = (props) => {
             to="/all-about-green-energy/living-green"
             className="header-child"
           >
-            <button className="side-bar-child">Living green</button>
+            <button className="side-bar-child" onClick={linkClickHandler}>
+              Living green
+            </button>
           </Link>
         </li>
         <li>
@@ -32,12 +41,16 @@ const SideBar = (props) => {
             to="/all-about-green-energy/learn-more"
             className="header-child"
           >
-            <button className="side-bar-child">Learn more</button>
+            <button className="side-bar-child" onClick={linkClickHandler}>
+              Learn more
+            </button>
           </Link>
         </li>
         <li>
           <Link to="/all-about-green-energy/about-us" className="header-child">
-            <button className="side-bar-child">About us</button>
+            <button className="side-bar-child" onClick={linkClickHandler}>
+              About us
+            </button>
           </Link>
         </li>
       </ul>

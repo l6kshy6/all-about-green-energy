@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import logo from "./logo.png";
 
 const RegBar = (props) => {
+  const linkClickHandler = () => props.setPageIsSet(false);
+
   return (
     <>
       <ul>
@@ -10,7 +12,7 @@ const RegBar = (props) => {
             to="/all-about-green-energy/climate-change"
             className="header-child"
           >
-            <button>Climate change</button>
+            <button onClick={linkClickHandler}>Climate change</button>
           </Link>
         </li>
         <li>
@@ -18,7 +20,7 @@ const RegBar = (props) => {
             to="/all-about-green-energy/living-green"
             className="header-child"
           >
-            <button>Living green</button>
+            <button onClick={linkClickHandler}>Living green</button>
           </Link>
         </li>
         <li>
@@ -26,12 +28,12 @@ const RegBar = (props) => {
             to="/all-about-green-energy/learn-more"
             className="header-child"
           >
-            <button>Learn more</button>
+            <button onClick={linkClickHandler}>Learn more</button>
           </Link>
         </li>
         <li>
           <Link to="/all-about-green-energy/about-us" className="header-child">
-            <button>About us</button>
+            <button onClick={linkClickHandler}>About us</button>
           </Link>
         </li>
       </ul>

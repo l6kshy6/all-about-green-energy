@@ -61,12 +61,32 @@ video {
   width: 40%;
   height: 500px;
   object-fit: cover;
-  object-position: right;
 }
 
 .content-container {
   display: flex;
-  justify-content: space-between;
   gap: 2rem;
   margin-bottom: 60px;
+}
+
+@media only screen and (max-width: 800px) {
+  .content-container {
+    display: block;
+    gap: 0;
+    width: 100%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .half {
+    width: 100%;
+    object-position: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text-container {
+    width: 100%;
+  }
 }

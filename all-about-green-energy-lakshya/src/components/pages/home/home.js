@@ -6,7 +6,7 @@ import Text from "../../Text";
 import { useState } from "react";
 import ExpandArrow from "./ExpandArrow";
 
-const Home = () => {
+const Home = (props) => {
   const [expandArrowActive, setExpandArrowActive] = useState(false);
 
   const mouseEnterHandler = () => {
@@ -24,7 +24,9 @@ const Home = () => {
       ],
       img: "https://dalrada.com/wp-content/uploads/2022/07/clean-vs-green-energy.jpg",
       position:
-        "-650px" /*changes the horizontal offset of the image, positive value pans image to left, negative pans to right*/,
+        props.width > 800
+          ? "-650px"
+          : "-440px" /*changes the horizontal offset of the image, positive value pans image to left, negative pans to right*/,
       btnIndex: 0,
       btnRoute: "/all-about-green-energy/learn-more",
     },
@@ -52,18 +54,12 @@ const Home = () => {
     },
   ];
 
-  const isEven = (num) => {
-    if (num % 2 == 0) {
-      return true;
-    }
-    return false;
-  };
-
   const toLearnMoreHandler = () => {
-    const element = document.querySelector(".page-content");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    const navHeight = document.querySelector(".nav").offsetHeight;
+    window.scrollBy({
+      top: window.innerHeight - navHeight - props.scroll,
+      behavior: "smooth",
+    });
     setExpandArrowActive(false);
   };
 
@@ -99,28 +95,30 @@ const Home = () => {
               regularText={item.text}
               btnIndex={item.btnIndex}
               btnRoute={item.btnRoute}
+              clickHandler={() => props.setPageIsSet(false)}
             />
           );
           return (
             <Fade bottom>
               <div className="content-container">
-                {isEven(index) ? (
-                  <img
-                    src={item.img}
-                    className="half"
-                    style={{ objectPosition: item.position }}
-                  />
+                {props.width > 800 && index % 2 == 0 ? (
+                  <>
+                    <img
+                      src={item.img}
+                      className="half"
+                      style={{ objectPosition: item.position }}
+                    />
+                    <HomeText />
+                  </>
                 ) : (
-                  <HomeText />
-                )}
-                {!isEven(index) ? (
-                  <img
-                    src={item.img}
-                    className="half"
-                    style={{ objectPosition: item.position }}
-                  />
-                ) : (
-                  <HomeText />
+                  <>
+                    <HomeText />
+                    <img
+                      src={item.img}
+                      className="half"
+                      style={{ objectPosition: item.position }}
+                    />
+                  </>
                 )}
               </div>
             </Fade>

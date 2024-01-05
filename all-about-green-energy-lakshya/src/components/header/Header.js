@@ -27,6 +27,7 @@ const Header = (props) => {
       <SideBar
         className={`side-bar ${sideBarActive ? "side-bar-active" : ""}`}
         setSideBarActive={setSideBarActive}
+        setPageIsSet={props.setPageIsSet}
       />
       <nav
         className={`nav ${props.navHome ? "nav-home" : ""} ${
@@ -40,7 +41,11 @@ const Header = (props) => {
             <img src={logo} className="logo-img"></img>
           )}
         </Link>
-        {width > 800 ? <RegBar /> : <MenuSVG onClick={onClickHandler} />}
+        {width > 800 ? (
+          <RegBar setPageIsSet={props.setPageIsSet} />
+        ) : (
+          <MenuSVG onClick={onClickHandler} />
+        )}
       </nav>
     </>
   );

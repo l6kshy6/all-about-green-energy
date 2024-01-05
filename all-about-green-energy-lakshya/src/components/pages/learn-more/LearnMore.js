@@ -7,33 +7,27 @@ import "./LearnMore.css";
 import { useState } from "react";
 import Circle from "./Circle";
 
-const LearnMore = () => {
+const LearnMore = (props) => {
   const [slideIndex, setSlideIndex] = useState(0);
   const [animation, setAnimation] = useState(0);
-
-  const isEven = (num) => {
-    if (num % 2 == 0) {
-      return true;
-    }
-    return false;
-  };
+  const slideWidth = props.width <= 1120 ? 800 : 1000;
 
   const circleClickHandler = (i) => {
     const indexDiff = slideIndex - i;
-    setAnimation(animation + indexDiff * 940);
+    setAnimation(animation + indexDiff * slideWidth);
     setSlideIndex(i);
   };
 
   const ArrowForwardHandler = () => {
     if (slideIndex !== slides.length - 1) {
       setSlideIndex(slideIndex + 1);
-      setAnimation(animation - 940);
+      setAnimation(animation - slideWidth);
     }
   };
   const ArrowBackHandler = () => {
     if (slideIndex !== 0) {
       setSlideIndex(slideIndex - 1);
-      setAnimation(animation + 940);
+      setAnimation(animation + slideWidth);
     }
   };
 
@@ -74,6 +68,7 @@ const LearnMore = () => {
       img: "https://c02.purpledshub.com/uploads/sites/48/2023/02/why-sky-blue-2db86ae.jpg",
     },
   ];
+
   return (
     <PageContent>
       <Fade bottom>
@@ -82,15 +77,24 @@ const LearnMore = () => {
       {learnMoreContent.map((item, index) => (
         <Fade bottom>
           <div className="content-container">
-            {isEven(index) ? (
-              <img src={item.img} className="half img" style={{objectPosition:item.position}} />
+            {props.width > 800 && index % 2 == 0 ? (
+              <>
+                <img
+                  src={item.img}
+                  className="half"
+                  style={{ objectPosition: item.position }}
+                />
+                <Text bigText={item.title} regularText={item.text} />
+              </>
             ) : (
-              <Text bigText={item.title} regularText={item.text} />
-            )}
-            {!isEven(index) ? (
-              <img src={item.img} className="half img" style={{objectPosition:item.position}} />
-            ) : (
-              <Text bigText={item.title} regularText={item.text} />
+              <>
+                <Text bigText={item.title} regularText={item.text} />
+                <img
+                  src={item.img}
+                  className="half"
+                  style={{ objectPosition: item.position }}
+                />
+              </>
             )}
           </div>
         </Fade>
