@@ -16,22 +16,29 @@ const LearnMore = (props) => {
 
   const circleClickHandler = (i) => {
     const indexDiff = slideIndex - i;
-    setAnimation(animation + indexDiff * getSlideWidth());
+    // setAnimation(animation + indexDiff * getSlideWidth());
+    setAnimation(-i * getSlideWidth());
     setSlideIndex(i);
   };
 
   const ArrowForwardHandler = () => {
     if (slideIndex !== slides.length - 1) {
-      setSlideIndex(slideIndex + 1);
-      setAnimation(animation - getSlideWidth());
+      const newSlideIndex = slideIndex + 1;
+      setSlideIndex(newSlideIndex);
+      setAnimation(-newSlideIndex * getSlideWidth());
     }
   };
   const ArrowBackHandler = () => {
     if (slideIndex !== 0) {
-      setSlideIndex(slideIndex - 1);
-      setAnimation(animation + getSlideWidth());
+      const newSlideIndex = slideIndex - 1;
+      setSlideIndex(newSlideIndex);
+      setAnimation(-newSlideIndex * getSlideWidth());
     }
   };
+
+  window.addEventListener("resize", () => {
+    setAnimation(-slideIndex * getSlideWidth());
+  });
 
   const slides = [
     {
