@@ -10,24 +10,26 @@ import Circle from "./Circle";
 const LearnMore = (props) => {
   const [slideIndex, setSlideIndex] = useState(0);
   const [animation, setAnimation] = useState(0);
-  const slideWidth = props.width <= 1120 ? 800 : 1000;
+  // const slideWidth = props.width <= 1120 ? 800 : 1000;
+  const getSlideWidth = () =>
+    document.querySelector(".slide-container").offsetWidth;
 
   const circleClickHandler = (i) => {
     const indexDiff = slideIndex - i;
-    setAnimation(animation + indexDiff * slideWidth);
+    setAnimation(animation + indexDiff * getSlideWidth());
     setSlideIndex(i);
   };
 
   const ArrowForwardHandler = () => {
     if (slideIndex !== slides.length - 1) {
       setSlideIndex(slideIndex + 1);
-      setAnimation(animation - slideWidth);
+      setAnimation(animation - getSlideWidth());
     }
   };
   const ArrowBackHandler = () => {
     if (slideIndex !== 0) {
       setSlideIndex(slideIndex - 1);
-      setAnimation(animation + slideWidth);
+      setAnimation(animation + getSlideWidth());
     }
   };
 
