@@ -34,7 +34,11 @@ const Header = (props) => {
           scroll > 0 && props.navHome ? "burger" : ""
         }`}
       >
-        <Link to="/all-about-green-energy" className="header-child logo">
+        <Link
+          to="/all-about-green-energy"
+          className="header-child logo"
+          onClick={() => props.setPageIsSet(false)}
+        >
           {width > 1100 ? (
             "All about green energy."
           ) : (
