@@ -27,9 +27,7 @@ function App() {
     setWidth(window.innerWidth);
   });
 
-  const navHome =
-    location.pathname == "/all-about-green-energy" ||
-    location.pathname == "/all-about-green-energy/";
+  const navHome = location.pathname == "/";
   return (
     <div className="App">
       {navHome ? null : (
@@ -42,25 +40,16 @@ function App() {
       )}
       <Routes>
         <Route
-          path="/all-about-green-energy"
+          path="/"
           element={
             <Home scroll={scroll} width={width} setPageIsSet={setPageIsSet} />
           }
         />
+        <Route path="/about-us" element={<AboutUs width={width} />} />
+        <Route path="/learn-more" element={<LearnMore width={width} />} />
+        <Route path="/living-green" element={<LivingGreen width={width} />} />
         <Route
-          path="/all-about-green-energy/about-us"
-          element={<AboutUs width={width} />}
-        />
-        <Route
-          path="/all-about-green-energy/learn-more"
-          element={<LearnMore width={width} />}
-        />
-        <Route
-          path="/all-about-green-energy/living-green"
-          element={<LivingGreen width={width} />}
-        />
-        <Route
-          path="/all-about-green-energy/climate-change"
+          path="/climate-change"
           element={<ClimateChange width={width} />}
         />
       </Routes>

@@ -8,31 +8,22 @@ const RegBar = (props) => {
     <>
       <ul>
         <li>
-          <Link
-            to="/all-about-green-energy/climate-change"
-            className="header-child"
-          >
+          <Link to="/climate-change" className="header-child">
             <button onClick={linkClickHandler}>Climate change</button>
           </Link>
         </li>
         <li>
-          <Link
-            to="/all-about-green-energy/living-green"
-            className="header-child"
-          >
+          <Link to="/living-green" className="header-child">
             <button onClick={linkClickHandler}>Living green</button>
           </Link>
         </li>
         <li>
-          <Link
-            to="/all-about-green-energy/learn-more"
-            className="header-child"
-          >
+          <Link to="/learn-more" className="header-child">
             <button onClick={linkClickHandler}>Learn more</button>
           </Link>
         </li>
         <li>
-          <Link to="/all-about-green-energy/about-us" className="header-child">
+          <Link to="/about-us" className="header-child">
             <button onClick={linkClickHandler}>About us</button>
           </Link>
         </li>

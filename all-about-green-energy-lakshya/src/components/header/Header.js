@@ -29,28 +29,30 @@ const Header = (props) => {
         setSideBarActive={setSideBarActive}
         setPageIsSet={props.setPageIsSet}
       />
-      <nav
-        className={`nav ${props.navHome ? "nav-home" : ""} ${
-          scroll > 0 && props.navHome ? "burger" : ""
-        }`}
-      >
-        <Link
-          to="/all-about-green-energy"
-          className="header-child logo"
-          onClick={() => props.setPageIsSet(false)}
+      <div className="outer-nav">
+        <nav
+          className={`nav ${props.navHome ? "nav-home" : ""} ${
+            scroll > 0 && props.navHome ? "burger" : ""
+          }`}
         >
-          {width > 1100 ? (
-            "All about green energy."
+          <Link
+            to="/"
+            className="header-child logo"
+            onClick={() => props.setPageIsSet(false)}
+          >
+            {width > 1100 ? (
+              "All about green energy."
+            ) : (
+              <img src={logo} className="logo-img"></img>
+            )}
+          </Link>
+          {width > 800 ? (
+            <RegBar setPageIsSet={props.setPageIsSet} />
           ) : (
-            <img src={logo} className="logo-img"></img>
+            <MenuSVG onClick={onClickHandler} />
           )}
-        </Link>
-        {width > 800 ? (
-          <RegBar setPageIsSet={props.setPageIsSet} />
-        ) : (
-          <MenuSVG onClick={onClickHandler} />
-        )}
-      </nav>
+        </nav>
+      </div>
     </>
   );
 };
