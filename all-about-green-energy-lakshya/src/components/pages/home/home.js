@@ -28,7 +28,7 @@ const Home = (props) => {
           ? "-650px"
           : "-440px" /*changes the horizontal offset of the image, positive value pans image to left, negative pans to right*/,
       btnIndex: 0,
-      btnRoute: "/all-about-green-energy/learn-more",
+      btnRoute: "/learn-more",
     },
     {
       title: "Why is this important?",
@@ -39,7 +39,7 @@ const Home = (props) => {
       position:
         "-60px" /*changes the horizontal offset of the image, positive value pans image to left, negative pans to right*/,
       btnIndex: 0,
-      btnRoute: "/all-about-green-energy/climate-change",
+      btnRoute: "/climate-change",
     },
     {
       title: "What can you do?",
@@ -50,7 +50,7 @@ const Home = (props) => {
       position:
         "-140px" /*changes the horizontal offset of the image, positive value pans image to left, negative pans to right*/,
       btnIndex: 0,
-      btnRoute: "/all-about-green-energy/living-green",
+      btnRoute: "/living-green",
     },
   ];
 
